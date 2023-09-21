@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'package:google_fonts/google_fonts.dart';
 //lib
 import 'package:muji_note/registration_page.dart';
 
@@ -21,14 +20,6 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: Column(
           children: [
-            Text(
-              'むじの手帳',
-              style: GoogleFonts.notoSansJp(
-                fontSize: 40, // フォントサイズ
-                fontWeight: FontWeight.bold, // フォントの太さ
-                color: Color.fromARGB(255, 237, 95, 95), // フォントの色
-              ),
-            ),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 12,
