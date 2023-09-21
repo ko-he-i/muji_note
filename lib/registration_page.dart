@@ -99,7 +99,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               width: 200,
               child: ElevatedButton(
                 onPressed: () {},
-                child: const Text('新規登録'),
+                child: const Text('Sign Up'),
               ),
             ),
           ],

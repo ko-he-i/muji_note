@@ -81,16 +81,24 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 20),
+            SizedBox(
+              width: 200,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('Log in'),
+              ),
+            ),
+            const SizedBox(height: 20),
             Text.rich(
               TextSpan(
-                text: '新規登録は', // default text style
+                text: '新規登録は',
                 children: <TextSpan>[
                   TextSpan(
                       text: 'こちら',
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: Colors.blue, // ボタンのテキスト色
-                        decoration: TextDecoration.underline, // 下線を追加
+                        color: Colors.blue,
+                        decoration: TextDecoration.underline,
                       ),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
