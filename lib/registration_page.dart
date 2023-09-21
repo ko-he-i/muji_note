@@ -94,6 +94,14 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: 200,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text('新規登録'),
+              ),
+            ),
           ],
         ),
       ),
