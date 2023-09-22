@@ -33,11 +33,11 @@ class _StartPageState extends State<StartPage> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const RegistrationPage(),
+                      builder: (context) => const LoginPage(),
                     ),
                   );
                 },
-                child: const Text('Sign up'),
+                child: const Text('Log in'),
               ),
             ),
             const SizedBox(height: 20),
@@ -47,11 +47,11 @@ class _StartPageState extends State<StartPage> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => const LoginPage(),
+                      builder: (context) => const RegistrationPage(),
                     ),
                   );
                 },
-                child: const Text('Log in'),
+                child: const Text('Sign up'),
               ),
             ),
             const SizedBox(height: 20),
