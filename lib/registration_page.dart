@@ -8,6 +8,7 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrationPageState extends State<RegistrationPage> {
+  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,16 +54,27 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   color: const Color.fromARGB(255, 255, 244, 220),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 12,
                     vertical: 4,
                   ),
                   child: TextField(
+                    obscureText: _isObscure,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Password',
-                      icon: Icon(Icons.password),
+                      icon: const Icon(Icons.key),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _isObscure = !_isObscure;
+                          });
+                        },
+                        icon: Icon(_isObscure
+                            ? Icons.visibility_off
+                            : Icons.visibility),
+                      ),
                     ),
                   ),
                 ),
@@ -79,16 +91,27 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   color: const Color.fromARGB(255, 255, 244, 220),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 12,
                     vertical: 4,
                   ),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Password',
-                      icon: Icon(Icons.password),
+                      icon: const Icon(Icons.key),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _isObscure = !_isObscure;
+                          });
+                        },
+                        icon: Icon(_isObscure
+                            ? Icons.visibility_off
+                            : Icons.visibility),
+                      ),
                     ),
                   ),
                 ),

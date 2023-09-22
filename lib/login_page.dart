@@ -62,10 +62,11 @@ class _LoginPageState extends State<LoginPage> {
                     vertical: 4,
                   ),
                   child: TextField(
+                    obscureText: true,
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Password',
-                      icon: Icon(Icons.password),
+                      icon: Icon(Icons.key),
                     ),
                   ),
                 ),
