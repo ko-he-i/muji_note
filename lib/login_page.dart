@@ -11,6 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  bool _isObscure = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,8 +57,8 @@ class _LoginPageState extends State<LoginPage> {
                   color: const Color.fromARGB(255, 255, 244, 220),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
-                child: const Padding(
-                  padding: EdgeInsets.symmetric(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
                     horizontal: 12,
                     vertical: 4,
                   ),
@@ -66,7 +67,17 @@ class _LoginPageState extends State<LoginPage> {
                     decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Password',
-                      icon: Icon(Icons.key),
+                      icon: const Icon(Icons.key),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            _isObscure = !_isObscure;
+                          });
+                        },
+                        icon: Icon(_isObscure
+                            ? Icons.visibility_off
+                            : Icons.visibility),
+                      ),
                     ),
                   ),
                 ),
