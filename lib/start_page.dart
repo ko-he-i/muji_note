@@ -20,7 +20,7 @@ class _StartPageState extends State<StartPage> {
         child: Column(
           children: [
             Text(
-              'むじの手帳',
+              'Muji Memo',
               style: GoogleFonts.notoSansJp(
                 fontSize: 40, // フォントサイズ
                 fontWeight: FontWeight.bold, // フォントの太さ

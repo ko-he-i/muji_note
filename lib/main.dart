@@ -13,12 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Muji Note',
       theme: ThemeData(
-        colorSchemeSeed: const Color.fromARGB(255, 255, 87, 87),
+        colorSchemeSeed: const Color.fromARGB(255, 123, 255, 139),
         useMaterial3: true,
         brightness: Brightness.light,
       ),
       darkTheme: ThemeData(
-        colorSchemeSeed: const Color.fromARGB(255, 255, 87, 87),
+        colorSchemeSeed: const Color.fromARGB(255, 123, 255, 139),
         useMaterial3: true,
         brightness: Brightness.dark,
       ),
