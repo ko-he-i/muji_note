@@ -9,18 +9,6 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  SettingsTile createSettingsTile({
-    required String titleText,
-    required IconData icon,
-    required String valueText,
-  }) {
-    return SettingsTile.navigation(
-      title: Text(titleText),
-      leading: Icon(icon),
-      value: Text(valueText),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,20 +21,24 @@ class _SettingsPageState extends State<SettingsPage> {
           SettingsSection(
             title: const Text('サポート'),
             tiles: <SettingsTile>[
-              createSettingsTile(
-                  titleText: 'Language',
-                  icon: Icons.language,
-                  valueText: '日本語'),
-              createSettingsTile(
-                titleText: 'お問い合わせ',
-                icon: Icons.email,
-                valueText: '',
+              SettingsTile.navigation(
+                title: const Text('Language'),
+                leading: const Icon(Icons.language),
+                value: const Text('日本語'),
               ),
-              createSettingsTile(
-                titleText: 'プライバシー・ポリシー',
-                icon: Icons.privacy_tip_outlined,
-                valueText: '',
-              )
+              SettingsTile.navigation(
+                title: const Text('Language'),
+                leading: const Icon(Icons.language),
+                value: const Text('日本語'),
+              ),
+              SettingsTile.navigation(
+                title: const Text('お問い合わせ'),
+                leading: const Icon(Icons.email),
+              ),
+              SettingsTile.navigation(
+                title: const Text('プライバシー・ポリシー'),
+                leading: const Icon(Icons.privacy_tip_outlined),
+              ),
             ],
           ),
         ],
