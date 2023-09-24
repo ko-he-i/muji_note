@@ -16,15 +16,20 @@ class _SetupPageState extends State<SetupPage> {
         title: const Text('Setup Page'),
       ),
       body: SettingsList(
+        platform: DevicePlatform.iOS,
         sections: [
           SettingsSection(
-            title: const Text('セクション'),
+            title: const Text('サポート'),
             tiles: <SettingsTile>[
               SettingsTile.navigation(
-                leading: const Icon(Icons.language),
                 title: const Text('Language'),
+                leading: const Icon(Icons.language),
                 value: const Text('日本語'),
               ),
+              SettingsTile.navigation(
+                title: const Text('お問い合わせ'),
+                leading: const Icon(Icons.mail),
+              )
             ],
           ),
         ],
