@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 //lib
 import 'package:muji_note/registration_page.dart';
+import 'package:muji_note/setup_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -97,7 +98,14 @@ class _LoginPageState extends State<LoginPage> {
                     SizedBox(
                       width: 200,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          //ToDO のちに変更
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => const SetupPage(),
+                            ),
+                          );
+                        },
                         child: const Text('Log in'),
                       ),
                     ),
