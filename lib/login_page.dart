@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromARGB(255, 255, 169, 163),
+                  color: Color.fromARGB(113, 181, 251, 211),
                 ),
                 child: Column(
                   children: [
@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 244, 220),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: const Padding(
@@ -65,7 +65,7 @@ class _LoginPageState extends State<LoginPage> {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 244, 220),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Padding(
