@@ -14,6 +14,21 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text('Home Page'),
       ),
+      body: const Center(
+        child: Column(
+          children: [],
+        ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'ホーム'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'お気に入り'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications), label: 'お知らせ'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'アカウント'),
+        ],
+        type: BottomNavigationBarType.fixed,
+      ),
     );
   }
 }

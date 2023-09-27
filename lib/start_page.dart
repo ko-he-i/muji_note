@@ -19,13 +19,28 @@ class _StartPageState extends State<StartPage> {
       body: Center(
         child: Column(
           children: [
-            Text(
-              'Muji Memo',
-              style: GoogleFonts.notoSansJp(
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
-                color: const Color.fromARGB(255, 237, 95, 95),
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Muji',
+                  style: GoogleFonts.workSans(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    color: const Color(0xFF3cecb4),
+                  ),
+                ),
+                Text(
+                  'Memo',
+                  style: GoogleFonts.workSans(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    color: const Color(0xFF3cecb4),
+                  ),
+                ),
+              ],
             ),
             const SizedBox(height: 20),
             SizedBox(
