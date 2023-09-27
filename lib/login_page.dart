@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:muji_note/home_page.dart';
 //lib
 import 'package:muji_note/registration_page.dart';
-import 'package:muji_note/settings_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color.fromARGB(113, 181, 251, 211),
+                  color: Color.fromARGB(99, 60, 236, 180),
                 ),
                 child: Column(
                   children: [
@@ -102,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                           //ToDO のちに変更
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => const SettingsPage(),
+                              builder: (context) => const HomePage(),
                             ),
                           );
                         },
