@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:muji_note/memo_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,16 +8,23 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  static const _pages = [
-    HomePage(),
-    MemoPage(),
+  int _selectedIndex = 0;
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text(
+      'Index 0: Home',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
   ];
-
-  int _selectIndex = 0;
 
   void _onItemTapped(int index) {
     setState(() {
-      _selectIndex = index;
+      _selectedIndex = index;
     });
   }
 
@@ -26,20 +32,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
+        title: const Text('HomePage'),
       ),
       body: Center(
-        child: _pages[_selectIndex],
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectIndex,
-        onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-              icon: Icon(Icons.calendar_month), label: 'Calendar'),
-          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'Memo'),
+            icon: Icon(Icons.calendar_month),
+            label: 'Calendar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.description),
+            label: 'Memo',
+          ),
         ],
-        type: BottomNavigationBarType.fixed,
+        currentIndex: _selectedIndex,
+        selectedItemColor: const Color.fromARGB(158, 0, 255, 26),
+        onTap: _onItemTapped,
       ),
     );
   }
