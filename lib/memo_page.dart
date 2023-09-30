@@ -10,9 +10,13 @@ class MemoPage extends StatefulWidget {
 class _MemoPageState extends State<MemoPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('memo'),
+    return const Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Text('memo'),
+          ],
+        ),
       ),
     );
   }

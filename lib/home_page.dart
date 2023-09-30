@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:muji_note/calendar_page.dart';
+import 'package:muji_note/memo_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -9,17 +11,9 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+  static const List<Widget> _pages = <Widget>[
+    CalendarPage(),
+    MemoPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -35,7 +29,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('HomePage'),
       ),
       body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
+        child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
