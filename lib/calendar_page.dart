@@ -18,7 +18,7 @@ class _CalendarPageState extends State<CalendarPage> {
         showNavigationArrow: false,
         selectionDecoration: BoxDecoration(
           color: Colors.transparent,
-          border: Border.all(color: Colors.red),
+          border: Border.all(color: Colors.green),
         ),
         headerStyle: const CalendarHeaderStyle(
           textAlign: TextAlign.center,
@@ -33,7 +33,7 @@ class _CalendarPageState extends State<CalendarPage> {
     final DateTime today = DateTime.now();
     final DateTime startTime =
         DateTime(today.year, today.month, today.day, 9, 0, 0);
-    final DateTime endTime = startTime.add(const Duration(hours: 2));
+    final DateTime endTime = startTime.add(const Duration(hours: 1));
     meetings.add(Meeting(
         'Conference', startTime, endTime, const Color(0xFF0F8644), false));
     return meetings;
