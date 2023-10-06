@@ -15,6 +15,7 @@ class _MemoPageState extends State<MemoPage> {
         child: Column(
           children: [
             Text('memo'),
+            Text('memopage'),
           ],
         ),
       ),
